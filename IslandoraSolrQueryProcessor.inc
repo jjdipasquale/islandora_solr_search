@@ -245,7 +245,7 @@ class IslandoraSolrQueryProcessor {
     if (!variable_get('dismax_allowed', 0) && $this->internalSolrParams['type'] == "dismax") {
       //$this->solrParams['qf'] = 'dc.title^5 dc.subject^2 dc.description^2 dc.creator^2 dc.contributor^1 dc.type';
         // jd added additional fields      
-	$this->solrParams['qf'] = 'dc.title^5 OCR.OCR^2 dc.subject^2 dc.description^2 dc.creator^2 dc.contributor^1 dc.type PID mods.identifier mods.dateCreated dc.date';
+	$this->solrParams['qf'] = 'dc.title^5 OCR.OCR^2 dc.subject^2 dc.description^2 dc.creator^2 dc.contributor^1 dc.type mods.identifier mods.dateCreated dc.date';
     }
 
     // Invoke a hook for third-party modules to alter the parameters.
